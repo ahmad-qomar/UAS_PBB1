@@ -49,7 +49,10 @@ class EditActivity : AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
                 db.noteDao().addNote(
                     Note(0, binding.editTitle.text.toString(),
-                        binding.editNote.text.toString())
+                        binding.editNote.text.toString(),
+                        binding.editPenulis.text.toString(),
+                        binding.editPenerbit.text.toString(),
+                        binding.editTerbit.text.toString())
                 )
                 finish()
             }
@@ -58,7 +61,10 @@ class EditActivity : AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
                 db.noteDao().updateNote(
                     Note(noteId, binding.editTitle.text.toString(),
-                        binding.editNote.text.toString())
+                        binding.editNote.text.toString(),
+                        binding.editPenulis.text.toString(),
+                        binding.editPenerbit.text.toString(),
+                        binding.editTerbit.text.toString())
                 )
                 finish()
             }
@@ -70,6 +76,9 @@ class EditActivity : AppCompatActivity() {
             val notes = db.noteDao().getNote(noteId)[0]
             binding.editTitle.setText(notes.title)
             binding.editNote.setText(notes.note)
+            binding.editPenulis.setText(notes.penulis)
+            binding.editPenerbit.setText(notes.penerbit)
+            binding.editTerbit.setText(notes.terbit)
         }
     }
     override fun onSupportNavigateUp(): Boolean {

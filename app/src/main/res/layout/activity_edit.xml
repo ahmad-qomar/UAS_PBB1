@@ -18,19 +18,63 @@
         android:layout_height="wrap_content"
         android:hint="Tulis Catatan"
         android:minLines="3"
-        app:layout_constraintStart_toStartOf="parent"  app:layout_constraintEnd_toEndOf="parent"  app:layout_constraintTop_toBottomOf="@+id/edit_title"  android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_title"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:background="@drawable/edittextstyle"/>
+    <EditText
+        android:id="@+id/edit_penulis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Edit Penulis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_note"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:background="@drawable/edittextstyle"/>
+    <EditText
+        android:id="@+id/edit_penerbit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Edit Penerbit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_penulis"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:background="@drawable/edittextstyle"/>
+    <EditText
+        android:id="@+id/edit_terbit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Tahun Terbit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_penerbit"
+        android:layout_marginTop="10dp"
         android:gravity="top"
         android:background="@drawable/edittextstyle"/>
     <Button
         android:id="@+id/button_save"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
         android:text="SAVE"
-        app:layout_constraintStart_toStartOf="parent"  app:layout_constraintEnd_toEndOf="parent"  app:layout_constraintTop_toBottomOf="@+id/edit_note"  android:layout_marginTop="20dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_note" />
+
     <Button
         android:id="@+id/button_update"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="UPDATE"
-        app:layout_constraintStart_toStartOf="parent"  app:layout_constraintEnd_toEndOf="parent"  app:layout_constraintTop_toBottomOf="@+id/button_save"  android:layout_marginTop="10dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_save" />
 </androidx.constraintlayout.widget.ConstraintLayout>
